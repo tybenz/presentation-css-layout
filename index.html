@@ -800,19 +800,18 @@ article {
 </section>
 <section>
 <h2>basic shape value syntax</h2>
-<pre><code>rectangle(x y width height [round rx ry]);
+<pre class="markdown"><code>inset(top right bottom left [round rx ry]);
 
-circle(cx cy radius);
+circle(radius at cx cy);
 
-ellipse(cx cy rx ry);
+ellipse(rx ry at cx cy);
 
 polygon(x1 y1, x2 y2, ... , xn yn);</code></pre>
 </section>
 <section>
 <h2>shapes from images</h2>
 <p>uses alpha channel path</p>
-<pre><code>url("an-image.png");
-  </pre></code>
+<pre class="markdown"><code>url("an-image.png");</pre></code>
 </section>
 
 <style scoped>
@@ -829,50 +828,45 @@ polygon(x1 y1, x2 y2, ... , xn yn);</code></pre>
     float: left;
   }
   .circle-float {
+    margin: 0 10px 10px 0;
     -webkit-shape-outside: circle(50%, 50%, 50%);
   }
 </style>
 <section>
 <h2>shape-outside and shape-margin</h2>
-<p>for floats and exclusions</p>
 </section>
 <section>
-<h2>start with a float</h2>
+<h3>start with a float</h3>
 <pre><code>.circle-float {
   float: left;
 }</code></pre>
   <div class="example">
-    <img class="face" style="border:0;box-shadow:none;margin:0px;" src="images/tyler-circle.png" alt="circular face"></img>
+    <img class="face" style="border:0;box-shadow:none;" src="images/tyler-circle.png" alt="circular face"></img>
     <p class="text">As the number of sides increases, a Polygon approximates to a Circle; and, when the number is very great indeed, say for example three or four hundred, it is extremely difficult for the most delicate touch to feel any polygonal angles. As the number of sides increases, a Polygon approximates to a Circle; and, when the number is very great indeed, say for example three or four hundred, it is extremely difficult for the most delicate touch to feel any polygonal angles. As the number of sides increases, a Polygon approximates to a Circle; and, when the number is very great indeed, say for example three or four hundred, it is extremely difficult for the most delicate touch to feel any polygonal angles. As the number of sides increases, a Polygon approximates to a Circle; and, when the number is very great indeed, say for example three or four hundred, it is extremely difficult for the most delicate touch to feel any polygonal angles.</p>
   </div>
 </section>
 <section>
-<h2>add a shape-outside</h2>
+<h3>add a shape-outside</h3>
 <pre><code>.circle-float {
   float: left;
   shape-outside: circle(50%, 50%, 50%);
 }</code></pre>
   <div class="example">
-    <img class="face circle-float" style="border:0;box-shadow:none;margin:0px;" src="images/tyler-circle.png" alt="circular face"></img>
+    <img class="face circle-float" style="border:0;box-shadow:none;" src="images/tyler-circle.png" alt="circular face"></img>
     <p class="text" contenteditable="true">As the number of sides increases, a Polygon approximates to a Circle; and, when the number is very great indeed, say for example three or four hundred, it is extremely difficult for the most delicate touch to feel any polygonal angles. As the number of sides increases, a Polygon approximates to a Circle; and, when the number is very great indeed, say for example three or four hundred, it is extremely difficult for the most delicate touch to feel any polygonal angles. As the number of sides increases, a Polygon approximates to a Circle; and, when the number is very great indeed, say for example three or four hundred, it is extremely difficult for the most delicate touch to feel any polygonal angles. As the number of sides increases, a Polygon approximates to a Circle; and, when the number is very great indeed, say for example three or four hundred, it is extremely difficult for the most delicate touch to feel any polygonal angles.</p>
   </div>
 </section>
 <section>
-<h2>exclusion with an ellipse</h2>
-<pre><code>.ellipse-exclusion {
-  wrap-flow: both;
-  shape-outside: ellipse(50%, 50%, 90%, 30%);
-}</code></pre>
-<img style="border:0;" src="images/exclusion-ellipse-no-margin.png" alt="ellipse exclusion"></img>
-</section>
-<section>
-<h2>adding shape-margin</h2>
-<pre><code>.ellipse-exclusion {
-  wrap-flow: both;
-  shape-outside: ellipse(50%, 50%, 90%, 30%);
+<h3>add a shape-margin</h3>
+  <pre><code>.circle-float {
+  float: left;
+  shape-outside: circle(50%, 50%, 50%);
   shape-margin: 10px;
 }</code></pre>
-<img style="border:0;" src="images/exclusion-ellipse.png" alt="ellipse exclusion with margin"></img>
+  <div class="example">
+    <img class="face circle-float" style="border:0;box-shadow:none;-webkit-shape-margin: 10px" src="images/tyler-circle.png" alt="circular face"></img>
+    <p class="text" contenteditable="true">As the number of sides increases, a Polygon approximates to a Circle; and, when the number is very great indeed, say for example three or four hundred, it is extremely difficult for the most delicate touch to feel any polygonal angles. As the number of sides increases, a Polygon approximates to a Circle; and, when the number is very great indeed, say for example three or four hundred, it is extremely difficult for the most delicate touch to feel any polygonal angles. As the number of sides increases, a Polygon approximates to a Circle; and, when the number is very great indeed, say for example three or four hundred, it is extremely difficult for the most delicate touch to feel any polygonal angles. As the number of sides increases, a Polygon approximates to a Circle; and, when the number is very great indeed, say for example three or four hundred, it is extremely difficult for the most delicate touch to feel any polygonal angles.</p>
+  </div>
 </section>
 
 <section>
