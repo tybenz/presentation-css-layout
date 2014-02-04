@@ -609,7 +609,7 @@ flex-direction: column-reverse;</code></pre>
 </section>
 <section>
   <h2>flex items flexing space</h2>
-  <pre><code>any margin property: auto;</code></pre>
+  <pre class="markdown"><code>any margin property: auto;</code></pre>
   <div class="flex-container" id="space-flexing">
     <div id="space-flexing-one"></div>
     <div id="space-flexing-two"></div>
@@ -849,7 +849,18 @@ polygon(x1 y1, x2 y2, ... , xn yn);</code></pre>
 <h3>add a shape-outside</h3>
 <pre><code>.circle-float {
   float: left;
-  shape-outside: circle(50%, 50%, 50%);
+  shape-outside: circle(50% at 50% 50%);
+}</code></pre>
+  <div class="example">
+    <img class="face circle-float" style="border:0;box-shadow:none;" src="images/tyler-circle.png" alt="circular face"></img>
+    <p class="text" contenteditable="true">As the number of sides increases, a Polygon approximates to a Circle; and, when the number is very great indeed, say for example three or four hundred, it is extremely difficult for the most delicate touch to feel any polygonal angles. As the number of sides increases, a Polygon approximates to a Circle; and, when the number is very great indeed, say for example three or four hundred, it is extremely difficult for the most delicate touch to feel any polygonal angles. As the number of sides increases, a Polygon approximates to a Circle; and, when the number is very great indeed, say for example three or four hundred, it is extremely difficult for the most delicate touch to feel any polygonal angles. As the number of sides increases, a Polygon approximates to a Circle; and, when the number is very great indeed, say for example three or four hundred, it is extremely difficult for the most delicate touch to feel any polygonal angles.</p>
+  </div>
+</section>
+<section>
+<h3>defaults</h3>
+<pre><code>.circle-float {
+  float: left;
+  shape-outside: circle();
 }</code></pre>
   <div class="example">
     <img class="face circle-float" style="border:0;box-shadow:none;" src="images/tyler-circle.png" alt="circular face"></img>
@@ -860,7 +871,7 @@ polygon(x1 y1, x2 y2, ... , xn yn);</code></pre>
 <h3>add a shape-margin</h3>
   <pre><code>.circle-float {
   float: left;
-  shape-outside: circle(50%, 50%, 50%);
+  shape-outside: circle();
   shape-margin: 10px;
 }</code></pre>
   <div class="example">
